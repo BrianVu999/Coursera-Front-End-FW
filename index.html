@@ -79,11 +79,67 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm align-self-center">
-                    <a role="button" class="btn btn-block nav-link btn-warning" data-toggle="tooltip" data-html="true" title="Or Call us at  <br><strong>+852 12345678</strong>" data-placement="bottom" href="#reserveform">Reserve Table</a>
+                    <a role="button" class="btn btn-block nav-link btn-warning" data-toggle="modal" data-target="#reserveTable" data-html="true" title="Or Call us at  <br><strong>+852 12345678</strong>" data-placement="bottom">Reserve Table</a>
                 </div>
             </div>
         </div>
     </header>
+
+    <!-- Reserve Table applying Modal -->
+    <div id="reserveTable" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Reserve a Table </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+
+                    <form>
+                        <div class="row">
+                            <dd class="col-12 col-sm-3"><b>Number of Guests</b></dd>
+                            <dd class="col-12 col-sm-8 row">
+                                <span class="col-2"><input type="radio" name="numberOfGuests"> 1</span>
+                                <span class="col-2"><input type="radio" name="numberOfGuests"> 2</span>
+                                <span class="col-2"><input type="radio" name="numberOfGuests"> 3</span>
+                                <span class="col-2"><input type="radio" name="numberOfGuests"> 4</span>
+                                <span class="col-2"><input type="radio" name="numberOfGuests"> 5</span>
+                                <span class="col-2"><input type="radio" name="numberOfGuests"> 6</span>
+                            </dd>
+                        </div>
+                        <div class="row mt-3">
+                            <dd class="col-12 col-sm-3"><b>Section</b></dd>
+                            <dd class="col-12 col-sm-8 row">
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-secondary active" style="margin-left: 15px">
+                                          <input type="radio" name="options" id="option1" autocomplete="off" checked> Non-Smoking
+                                        </label>
+                                    <label class="btn btn-secondary">
+                                          <input type="radio" name="options" id="option2" autocomplete="off"> Smoking
+                                        </label>
+                                </div>
+                            </dd>
+                        </div>
+                        <div class="row mt-3">
+                            <dd class="col-12 col-sm-3"><b>Date and Time</b></dd>
+                            <dd class="col-12 col-sm-9 row ">
+                                <div class="col-12 col-sm-6">
+                                    <input class="form-control" type="text" placeholder="Date">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <input class="form-control" type="text" placeholder="Time">
+                                </div>
+                            </dd>
+                        </div>
+                        <button class="btn btn-primary mt-3 float-right ml-1">Reserve</button>
+                        <button type="button" class="btn btn-secondary mt-3 float-right" data-dismiss="modal">Cancel</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="container">
 
@@ -172,10 +228,11 @@
             <h3>Meet our Culinary Specialists</h3>
         </div>
     </div>
-    <div class="row row-content align-items-center justify-content-center" id="reverse_table">
-        <div class="col-12 col-sm-8">
+    <!-- Week 3 - Exercise to change this to Modal -->
+    <!-- <div class="row row-content align-items-center justify-content-center" id="reserve_table">
+        <form class="col-12 col-sm-8">
             <div class="card">
-                <h3 class="card-header bg-warning text-white">Reverse a Table</h3>
+                <h3 class="card-header bg-warning text-white">Reserve a Table</h3>
                 <div class="card-body">
                     <div class="row">
                         <dd class="col-12 col-sm-3">Number of Guests</dd>
@@ -199,12 +256,12 @@
                             </div>
                         </dd>
                     </div>
-                    <button class="offset-sm-3 btn btn-primary mt-3"><b>Reverse</b></button>
+                    <button class="offset-sm-3 btn btn-primary mt-3"><b>Reserve</b></button>
 
                 </div>
             </div>
-        </div>
-    </div>
+        </form>
+    </div> -->
     </div>
 
     <footer class=" footer ">
@@ -252,11 +309,12 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js "></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js "></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js "></script>
-    <script>
+    <!-- Comment for Week3 Exercise by applying Modal -->
+    <!-- <script>
         $(document).ready(function() {
             $('[data-toggle="tooltip"]').tooltip();
         });
-    </script>
+    </script> -->
 
 </body>
 
