@@ -25,7 +25,7 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a id="loginButton" data-target="#loginModal">
                     <span class="fa fa-sign-in"></span> Login</a>
                 </span>
             </div>
@@ -79,7 +79,7 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm align-self-center">
-                    <a role="button" class="btn btn-block nav-link btn-warning" data-toggle="modal" data-target="#reserveTable" data-html="true" title="Or Call us at  <br><strong>+852 12345678</strong>" data-placement="bottom">Reserve Table</a>
+                    <a role="button" id="reserveTableButton" class="btn btn-block nav-link btn-warning" data-target="#reserveTable" data-html="true" title="Or Call us at  <br><strong>+852 12345678</strong>" data-placement="bottom">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -112,10 +112,10 @@
                             <dd class="col-12 col-sm-3"><b>Section</b></dd>
                             <dd class="col-12 col-sm-8 row">
                                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-secondary active" style="margin-left: 15px">
+                                    <label class="btn btn-success active" style="margin-left: 15px">
                                           <input type="radio" name="options" id="option1" autocomplete="off" checked> Non-Smoking
                                         </label>
-                                    <label class="btn btn-secondary">
+                                    <label class="btn btn-danger">
                                           <input type="radio" name="options" id="option2" autocomplete="off"> Smoking
                                         </label>
                                 </div>
@@ -352,6 +352,18 @@
                     $("#carouselButton").children("span").removeClass('fa-play');
                     $("#carouselButton").children("span").addClass('fa-pause');
                 }
+            });
+
+            //Assignment 4
+
+            //Reserve Table
+            $("#reserveTableButton").click(function() {
+                $('#reserveTable').modal('toggle');
+            });
+
+            //Login Modal
+            $("#loginButton").click(function() {
+                $('#loginModal').modal('toggle');
             });
 
         });
